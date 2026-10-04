@@ -1,0 +1,18 @@
+services:
+    app:
+      build:
+        context: ..
+        dockerfile: docker/Dockerfile
+      container_name: {{APP_NAME}}-app
+      restart: always
+      volumes:
+        - ../public:/var/www/html/{{APP_NAME}}/public
+      ports:
+        - "127.0.0.1:{{APP_PORT}}:9000"
+      networks:
+        - mariadb-user
+
+    
+networks:
+    mariadb-user:
+      external: true

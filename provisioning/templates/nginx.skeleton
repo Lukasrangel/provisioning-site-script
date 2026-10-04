@@ -1,0 +1,61 @@
+server { 
+	listen 80; 
+	listen [::]:80; 
+	server_name {{DOMAIN}}; 
+
+	real_ip_header CF-Connecting-IP;
+        real_ip_recursive on;
+
+        set_real_ip_from 127.0.0.1;
+
+	root /var/www/html/{{APP_NAME}}/public; 
+	index index.php index.html; 
+
+	# Logs 
+	access_log /var/log/nginx/{{APP_NAME}}/{{APP_NAME}}-access.log; 
+	error_log /var/log/nginx/{{APP_NAME}}/{{APP_NAME}}-error.log; 
+
+	# Tamanho máximo de upload 
+	client_max_body_size 64M; 
+
+	# Rewrite de permalinks do WordPress 
+	location / { 
+		try_files $uri $uri/ /index.php?$args; 
+	} 
+
+	# Processar PHP via PHP-FPM 
+	location ~ \.php$ {  
+		fastcgi_pass 127.0.0.1:{{APP_PORT}}; 
+		fastcgi_param SCRIPT_FILENAME /var/www/html$fastcgi_script_name; 
+		include fastcgi_params; fastcgi_read_timeout 300; 
+	} 
+
+	# Bloquear acesso a arquivos ocultos 
+	location ~ /\. { 
+		deny all; 
+		access_log off; 
+		log_not_found off; 
+	} 
+
+	# Cache de arquivos estáticos 
+	location ~* \.(css|js|jpg|jpeg|png|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)$ { 
+		expires 30d; 
+		add_header Cache-Control "public, immutable"; 
+		access_log off; 
+	} 
+
+	# Bloquear acesso ao wp-config.php 
+	location = /wp-config.php { 
+		deny all; 
+	} 
+
+	# Bloquear acesso ao xmlrpc.php (alvo frequente de ataques) 
+	location = /xmlrpc.php { 
+		deny all; 
+		access_log off; 
+		log_not_found off; 
+	} 
+
+	# Bloquear listagem de diretórios 
+	autoindex off; 
+}
