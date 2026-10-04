@@ -1,0 +1,159 @@
+/*
+Theme Name: Punk
+Theme URI: https://themeshaper.com/punk/
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Punk is a theme for the ones who won’t behave. Made for bands, musicians, and bloggers who’d rather break the rules than follow them. The built-in halftone imagery pushes a scruffy, unapologetic aesthetic inspired by photocopied flyers and torn-up zines.
+Requires at least: 6.8
+Tested up to: 7.0
+Requires PHP: 7.2
+Version: 1.0.8
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: punk
+Tags: one-column, featured-images, full-site-editing, block-patterns, rtl-language-support, threaded-comments, translation-ready, wide-blocks
+
+Punk WordPress Theme, (C) 2025 Automattic, Inc.
+Punk is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+*/
+
+/*
+ * Temporary fix for space between layout in Navigation block.
+ * https://github.com/WordPress/gutenberg/issues/73386
+ */
+.wp-block-navigation__container.block-editor-block-list__layout {
+    width: 100%;
+}
+
+/*
+ * Control the hover stylings of outline block style.
+ * Unnecessary once block styles are configurable via theme.json
+ * https://github.com/WordPress/gutenberg/issues/42794
+ */
+.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):hover {
+	background-color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--base);
+	border-color: var(--wp--preset--color--secondary);
+}
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+a {
+	text-decoration-thickness: max(0.025em, 1px) !important;
+    text-underline-offset: max(0.08em, 2px);
+}
+
+/* Progresive enhancement to reduce widows and orphans.
+/* https://github.com/WordPress/gutenberg/issues/55190
+*/
+h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption {
+	text-wrap: balance; /* Safari fallback */ 
+	text-wrap: pretty;
+}
+p {
+	text-wrap: pretty;
+}
+
+/* To make the background blending mode work in Safari */
+html {
+	background-color: white;
+}
+
+body {
+	background-blend-mode: multiply;
+	background-position: 50% 0;
+	background-size: cover;
+}
+
+/* Halftone Effect */
+:root{
+  --ht-cell: 9px;        /* grid cell size (even px keeps dots crisp) */
+  --ht-dot: 5px;         /* dot radius (<= half of cell) */
+  --ht-blur: 0.3px;      /* “ink bleed” before threshold */
+  --ht-brightness: 0.68; /* shifts threshold point (lower = darker) */
+  --ht-opacity: 1;       /* overlay strength */
+}
+
+/* Blending mode */
+.wp-block-cover:has(img),
+.wp-block-image:has(img),
+.wp-block-post-featured-image:has(img) {
+	filter: brightness(var(--ht-brightness))
+          blur(var(--ht-blur))
+          contrast(300);
+	isolation: isolate;
+	mix-blend-mode: multiply;
+	position: relative;
+}
+
+/* The dots overlay */
+.wp-block-cover:has(img)::after,
+.wp-block-image:has(img)::after,
+.wp-block-post-featured-image:has(img)::after {
+	background-blend-mode: multiply;
+	background-image: radial-gradient(var(--ht-dot) at 50% 50%, #000, #fff), radial-gradient(var(--ht-dot) at 50% 50%, #000, #fff);
+	background-position: 0 0, calc(var(--ht-cell)/1.8) calc(var(--ht-cell)/2);
+	background-size: var(--ht-cell) var(--ht-cell), var(--ht-cell) var(--ht-cell);
+	content: "";
+	inset: 0;
+	mix-blend-mode: screen;
+    opacity: var(--ht-opacity);
+	pointer-events: none;
+	position: absolute;
+	z-index: 1; 
+}
+
+.wp-block-cover img,
+.wp-block-image img,
+.wp-block-post-featured-image img {
+	display: block; 
+	filter: url(#ht-dots) grayscale(100%) contrast(130%);
+	height: auto;
+	width: 100%;
+}
+
+/* Disable halftone for specific images */
+.wp-block-cover.no-halftone,
+.wp-block-gallery .wp-block-image.no-halftone,
+.wp-block-gallery.no-halftone .wp-block-image,
+.wp-block-image.no-halftone,
+.wp-block-post-featured-image.no-halftone {
+	filter: none !important;
+}
+
+.wp-block-cover.no-halftone::after,
+.wp-block-gallery .wp-block-image.no-halftone::after,
+.wp-block-gallery.no-halftone .wp-block-image::after,
+.wp-block-image.no-halftone::after,
+.wp-block-post-featured-image.no-halftone::after {
+	content: none !important;
+	display: none !important;
+}
+
+/* Search field styling */
+
+:where(.wp-block-search__input) {
+    background-color: var(--wp--preset--color--color-3);
+}
+
+/* Forms styling */
+
+:where(.wp-block-jetpack-input) {
+    background-color: var(--wp--preset--color--color-3);
+}
+
+.wp-block-post-comments-form .comment-form input:not([type="submit"]):not([type="checkbox"]):not([type="hidden"]), .wp-block-post-comments-form .comment-form textarea {
+    background-color: var(--wp--preset--color--color-3);
+}

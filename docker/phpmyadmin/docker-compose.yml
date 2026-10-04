@@ -1,0 +1,16 @@
+services:
+
+    phpmyadmin:
+      image: phpmyadmin:latest
+      container_name: phpmyadmin
+      restart: unless-stopped
+      environment:
+        PMA_ARBITRARY: 1  
+      ports:
+        - "127.0.0.1:8080:80"
+      networks:
+        - database-admin
+  
+networks:
+  database-admin:
+    external: true

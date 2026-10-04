@@ -1,0 +1,85 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "1200px",
+			"wideSize": "1400px"
+		},
+		"color": {
+			"palette": [
+				{ "slug": "green", "color": "#00ff00", "name": "Cyber Green" },
+				{ "slug": "green-dim", "color": "#00aa00", "name": "Dim Green" },
+				{ "slug": "dark", "color": "#000000", "name": "Black" },
+				{ "slug": "red-pill", "color": "#ff3333", "name": "Red Pill" },
+				{ "slug": "white", "color": "#ffffff", "name": "White" }
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Inria Sans\", ui-monospace, monospace",
+					"name": "Inria Sans",
+					"slug": "inria-sans",
+					"fontFace": [
+						{
+							"fontFamily": "Inria Sans",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/InriaSans-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "Inria Sans",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/InriaSans-Bold.woff2" ]
+						},
+						{
+							"fontFamily": "Inria Sans",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"src": [ "file:./assets/fonts/InriaSans-Italic.woff2" ]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|dark",
+			"text": "var:preset|color|green"
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|inria-sans"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var:preset|color|green"
+				},
+				":hover": {
+					"color": {
+						"text": "var:preset|color|white"
+					}
+				}
+			},
+			"heading": {
+				"color": {
+					"text": "var:preset|color|green"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "transparent",
+					"text": "var:preset|color|green"
+				},
+				"border": {
+					"color": "var:preset|color|green",
+					"width": "2px"
+				}
+			}
+		}
+	}
+}

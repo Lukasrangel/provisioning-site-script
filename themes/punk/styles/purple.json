@@ -1,0 +1,25 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#beaaef",
+					"name": "Color 1",
+					"slug": "color-1"
+				},
+				{
+					"color": "#212121",
+					"name": "Color 2",
+					"slug": "color-2"
+				},
+				{
+					"color": "#e1d5ff",
+					"name": "Color 3",
+					"slug": "color-3"
+				}
+			]
+		}
+	},
+	"version": 3,
+	"title": "Purple"
+}

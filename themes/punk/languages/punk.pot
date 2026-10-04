@@ -1,0 +1,549 @@
+# Copyright (C) 2026 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Punk 1.0.8\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/punk\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-13T02:01:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Punk"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://themeshaper.com/punk/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Punk is a theme for the ones who won’t behave. Made for bands, musicians, and bloggers who’d rather break the rules than follow them. The built-in halftone imagery pushes a scruffy, unapologetic aesthetic inspired by photocopied flyers and torn-up zines."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://automattic.com/"
+msgstr ""
+
+#: patterns/404.php
+msgctxt "Pattern title"
+msgid "404"
+msgstr ""
+
+#: patterns/404.php:12
+msgid "what?!"
+msgstr ""
+
+#: patterns/404.php:17
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: patterns/archive.php
+msgctxt "Pattern title"
+msgid "archive"
+msgstr ""
+
+#: patterns/archive.php:16
+#: patterns/search.php:18
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: patterns/band-tour-dates.php
+msgctxt "Pattern title"
+msgid "Tour Dates"
+msgstr ""
+
+#: patterns/band-tour-dates.php:14
+msgid "London"
+msgstr ""
+
+#: patterns/band-tour-dates.php:18
+#: patterns/band-tour-dates.php:78
+#: patterns/band-tour-dates.php:98
+#: patterns/band-tour-dates.php:118
+msgid "SOLD OUT!"
+msgstr ""
+
+#: patterns/band-tour-dates.php:23
+msgid "11.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:34
+msgid "Leeds"
+msgstr ""
+
+#: patterns/band-tour-dates.php:38
+#: patterns/band-tour-dates.php:58
+#: patterns/band-tour-dates.php:138
+#: patterns/band-tour-dates.php:158
+#: patterns/band-tour-dates.php:178
+#: patterns/band-tour-dates.php:198
+#: patterns/band-tour-dates.php:218
+#: patterns/band-tour-dates.php:238
+#: patterns/band-tour-dates.php:258
+#: patterns/band-tour-dates.php:278
+#: patterns/band-tour-dates.php:298
+#: patterns/band-tour-dates.php:318
+#: patterns/band-tour-dates.php:338
+#: patterns/band-tour-dates.php:358
+#: patterns/band-tour-dates.php:392
+#: patterns/band-tour-dates.php:412
+#: patterns/band-tour-dates.php:452
+#: patterns/band-tour-dates.php:472
+#: patterns/band-tour-dates.php:512
+#: patterns/band-tour-dates.php:532
+#: patterns/band-tour-dates.php:552
+#: patterns/band-tour-dates.php:572
+msgid "Get Tickets"
+msgstr ""
+
+#: patterns/band-tour-dates.php:43
+msgid "12.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:54
+msgid "Dublin"
+msgstr ""
+
+#: patterns/band-tour-dates.php:63
+msgid "13.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:74
+msgid "Manchester"
+msgstr ""
+
+#: patterns/band-tour-dates.php:83
+msgid "14.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:94
+msgid "Birmingham"
+msgstr ""
+
+#: patterns/band-tour-dates.php:103
+msgid "15.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:114
+msgid "Bristol"
+msgstr ""
+
+#: patterns/band-tour-dates.php:123
+#: patterns/band-tour-dates.php:143
+msgid "16.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:134
+msgid "Brighton"
+msgstr ""
+
+#: patterns/band-tour-dates.php:154
+msgid "Glasgow"
+msgstr ""
+
+#: patterns/band-tour-dates.php:163
+msgid "17.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:174
+msgid "Edinburgh"
+msgstr ""
+
+#: patterns/band-tour-dates.php:183
+msgid "18.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:194
+msgid "Munich"
+msgstr ""
+
+#: patterns/band-tour-dates.php:203
+msgid "19.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:214
+msgid "Hamburg"
+msgstr ""
+
+#: patterns/band-tour-dates.php:223
+msgid "21.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:234
+msgid "Berlin"
+msgstr ""
+
+#: patterns/band-tour-dates.php:243
+msgid "24.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:254
+msgid "Athens"
+msgstr ""
+
+#: patterns/band-tour-dates.php:263
+msgid "26.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:274
+msgid "Bordeaux"
+msgstr ""
+
+#: patterns/band-tour-dates.php:283
+msgid "29.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:294
+msgid "Paris"
+msgstr ""
+
+#: patterns/band-tour-dates.php:303
+msgid "30.11.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:314
+msgid "Madrid"
+msgstr ""
+
+#: patterns/band-tour-dates.php:323
+msgid "01.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:334
+msgid "Barcelona"
+msgstr ""
+
+#: patterns/band-tour-dates.php:343
+msgid "02.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:354
+msgid "Valencia"
+msgstr ""
+
+#: patterns/band-tour-dates.php:363
+msgid "03.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:373
+msgid "Marseille"
+msgstr ""
+
+#: patterns/band-tour-dates.php:377
+msgid "CANCELLED"
+msgstr ""
+
+#: patterns/band-tour-dates.php:388
+msgid "Lisbon"
+msgstr ""
+
+#: patterns/band-tour-dates.php:397
+msgid "05.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:408
+msgid "Porto"
+msgstr ""
+
+#: patterns/band-tour-dates.php:417
+msgid "06.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:428
+msgid "Milan"
+msgstr ""
+
+#: patterns/band-tour-dates.php:432
+#: patterns/band-tour-dates.php:492
+msgid "Sold out!"
+msgstr ""
+
+#: patterns/band-tour-dates.php:437
+msgid "08.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:448
+msgid "Florence"
+msgstr ""
+
+#: patterns/band-tour-dates.php:457
+msgid "09.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:468
+msgid "Warsaw"
+msgstr ""
+
+#: patterns/band-tour-dates.php:477
+msgid "11.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:488
+msgid "Riga"
+msgstr ""
+
+#: patterns/band-tour-dates.php:497
+msgid "13.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:508
+msgid "Vienna"
+msgstr ""
+
+#: patterns/band-tour-dates.php:517
+msgid "14.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:528
+msgid "Amsterdam"
+msgstr ""
+
+#: patterns/band-tour-dates.php:537
+msgid "15.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:548
+msgid "Copenhagen"
+msgstr ""
+
+#: patterns/band-tour-dates.php:557
+msgid "18.12.2025"
+msgstr ""
+
+#: patterns/band-tour-dates.php:568
+msgid "Stockholm"
+msgstr ""
+
+#: patterns/band-tour-dates.php:577
+msgid "19.12.2025"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "footer"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "header"
+msgstr ""
+
+#: patterns/header.php:12
+msgid "The Dungeon Rabbits"
+msgstr ""
+
+#: patterns/home.php
+msgctxt "Pattern title"
+msgid "home"
+msgstr ""
+
+#: patterns/home.php:12
+msgid "Four young punk rockers sitting on a subway, wearing spiked leather jackets and sporting colorful mohawks in yellow, red, and pink/purple."
+msgstr ""
+
+#: patterns/home.php:16
+msgid "Live On Tour! UK and Europe"
+msgstr ""
+
+#: patterns/home.php:21
+msgid "London·Leeds·Dublin·Manchester·Glasgow"
+msgstr ""
+
+#: patterns/home.php:25
+msgid "Edinburgh·Munich·Hamburg·Berlin·Athens"
+msgstr ""
+
+#: patterns/home.php:29
+msgid "Birmingham·Bristol·Brighton·Bordeaux"
+msgstr ""
+
+#: patterns/home.php:33
+msgid "Paris·Madrid·Barcelona·Valencia·Marseille"
+msgstr ""
+
+#: patterns/home.php:37
+msgid "Lisbon·Porto·Milan·Florence·Warsaw·Riga"
+msgstr ""
+
+#: patterns/home.php:41
+msgid "Amsterdam·Vienna·copenhaghen·Stockholm"
+msgstr ""
+
+#: patterns/index.php
+msgctxt "Pattern title"
+msgid "index"
+msgstr ""
+
+#: patterns/page.php
+msgctxt "Pattern title"
+msgid "page"
+msgstr ""
+
+#: patterns/search.php
+msgctxt "Pattern title"
+msgid "search"
+msgstr ""
+
+#: patterns/single.php
+msgctxt "Pattern title"
+msgid "single"
+msgstr ""
+
+#: theme.json
+#: styles/gray.json
+#: styles/green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Color 1"
+msgstr ""
+
+#: theme.json
+#: styles/gray.json
+#: styles/green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Color 2"
+msgstr ""
+
+#: theme.json
+#: styles/gray.json
+#: styles/green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/yellow.json
+msgctxt "Color name"
+msgid "Color 3"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Color 4"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XXL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Special Elite"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "PlymouthPress"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Post Meta"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: styles/gray.json
+msgctxt "Style variation name"
+msgid "Gray"
+msgstr ""
+
+#: styles/green.json
+msgctxt "Style variation name"
+msgid "Green"
+msgstr ""
+
+#: styles/purple.json
+msgctxt "Style variation name"
+msgid "Purple"
+msgstr ""
+
+#: styles/red.json
+msgctxt "Style variation name"
+msgid "Red"
+msgstr ""
+
+#: styles/yellow.json
+msgctxt "Style variation name"
+msgid "Yellow"
+msgstr ""

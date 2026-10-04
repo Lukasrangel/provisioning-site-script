@@ -1,0 +1,33 @@
+services:
+
+
+    database:
+      image: mariadb:10.11
+      container_name: mariadb
+      restart: always
+      volumes:
+        - ./data/db:/var/lib/mysql
+        - ./secrets/mariadb.cnf:/run/secrets/mariadb.cnf:ro
+      env_file:
+        - db.env
+      networks:
+        - mariadb-user
+        - database-admin
+
+      healthcheck:
+        test:
+          - CMD
+          - healthcheck.sh
+          - --connect
+          - --innodb_initialized
+        interval: 30s
+        timeout: 10s
+        retries: 3
+
+
+networks:
+    database-admin:
+      external: true
+
+    mariadb-user:
+      external: true

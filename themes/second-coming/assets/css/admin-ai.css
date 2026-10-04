@@ -1,0 +1,38 @@
+/* Admin Generate box — native WP admin, not the front Matrix chrome. */
+
+.sc-ai-box {
+    max-width: 52rem;
+}
+
+.edit-php .sc-ai-box {
+    margin: 8px 0 12px;
+    padding: 12px 16px;
+}
+
+#second-coming-ai-generate .sc-ai-box {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.sc-ai-box__intro {
+    margin-top: 0;
+}
+
+.sc-ai-box textarea {
+    width: 100%;
+    font-family: Consolas, Monaco, monospace;
+    line-height: 1.45;
+}
+
+.sc-ai-box__status {
+    display: inline-block;
+    margin-left: 8px;
+    color: #50575e;
+}
+
+.sc-ai-box .button[disabled] {
+    opacity: 0.7;
+}

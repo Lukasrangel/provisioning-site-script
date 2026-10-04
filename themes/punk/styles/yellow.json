@@ -1,0 +1,25 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#f9ee71",
+					"name": "Color 1",
+					"slug": "color-1"
+				},
+				{
+					"color": "#212121",
+					"name": "Color 2",
+					"slug": "color-2"
+				},
+				{
+					"color": "#fff9bc",
+					"name": "Color 3",
+					"slug": "color-3"
+				}
+			]
+		}
+	},
+	"version": 3,
+	"title": "Yellow"
+}

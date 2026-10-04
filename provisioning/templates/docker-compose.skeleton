@@ -14,7 +14,8 @@ services:
       WORDPRESS_DB_PASSWORD: 123456
       WORDPRESS_DB_NAME: {{APP_NAME}}
     volumes:
-      - /var/www/html/{{APP_NAME}}/public:/var/www/html
+      - /var/www/html/{{APP_NAME}}/public:/var/www/html:ro
+      - /var/www/html/{{APP_NAME}}/public/wp-content/uploads:/var/www/html/wp-content/uploads:rw
     networks:
         - mariadb-user
 
