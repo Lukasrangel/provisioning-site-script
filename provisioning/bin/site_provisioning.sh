@@ -149,3 +149,4 @@ remove_tmp_themes_dir
 docker_wordpress_app_config
 
 nginx_file_provide
+nginx_check_and_restart
