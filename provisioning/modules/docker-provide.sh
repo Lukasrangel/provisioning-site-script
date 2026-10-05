@@ -14,7 +14,7 @@ make_dir(){
 	fi
 
 	mkdir /var/www/html/$APP_NAME/public;
-	
+	chown -R "www-data:www-data /var/www/html/${APP_NAME}/public";	
 	echo "[x] Diretorio criado em /var/www/html/$APP_NAME"; 
 
 }
@@ -76,13 +76,13 @@ docker_compose_up(){
 
 remove_tmp_themes_dir(){
 
-	rm -r "/var/www/html/$PP_NAME/docker/themes"
+	rm -r "/var/www/html/${APP_NAME}/docker/themes"
 
 }
 
 docker_wordpress_app_config(){
 
-	docker exec "$APP_NAME-app" \
+	docker exec "${APP_NAME}-app" \
     		wp config set DISALLOW_FILE_MODS true --raw --allow-root
 
 }

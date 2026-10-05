@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: {{APP_NAME}}-app
     restart: always
+    user: "www-data:www-data"
     ports:
       - "127.0.0.1:{{APP_PORT}}:9000"
     environment:
@@ -14,8 +15,9 @@ services:
       WORDPRESS_DB_PASSWORD: 123456
       WORDPRESS_DB_NAME: {{APP_NAME}}
     volumes:
-      - /var/www/html/{{APP_NAME}}/public:/var/www/html:ro
-      - /var/www/html/{{APP_NAME}}/public/wp-content/uploads:/var/www/html/wp-content/uploads:rw
+      - /var/www/html/{{APP_NAME}}/public:/var/www/html
+    mem_limit: 512m
+    cpus: 1.0
     networks:
         - mariadb-user
 
