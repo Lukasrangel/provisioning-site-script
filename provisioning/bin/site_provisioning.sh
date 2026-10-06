@@ -146,7 +146,6 @@ docker_compose_file
 docker_copy_themes
 docker_compose_up
 remove_tmp_themes_dir
-docker_wordpress_app_config
 
 nginx_file_provide
 nginx_check_and_restart

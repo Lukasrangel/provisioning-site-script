@@ -1,3 +1,12 @@
-FROM bibica/wordpress-wp-cli-php8.4-fpm-alpine
+FROM wordpress:php8.2-fpm-alpine
+
+RUN apk add --no-cache curl \
+    && curl -fsSL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+       -o /usr/local/bin/wp \
+    && chmod +x /usr/local/bin/wp
+
+RUN sed -i "/That's all, stop editing! Happy publishing./i define( 'DISALLOW_FILE_MODS', true );" \
+    /usr/src/wordpress/wp-config-docker.php
 
 COPY themes/ /usr/src/wordpress/wp-content/themes/
+

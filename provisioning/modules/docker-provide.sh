@@ -80,9 +80,4 @@ remove_tmp_themes_dir(){
 
 }
 
-docker_wordpress_app_config(){
 
-	docker exec "${APP_NAME}-app" \
-    		wp config set DISALLOW_FILE_MODS true --raw --allow-root
-
-}

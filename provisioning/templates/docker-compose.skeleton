@@ -6,7 +6,6 @@ services:
       dockerfile: Dockerfile
     container_name: {{APP_NAME}}-app
     restart: always
-    user: "www-data:www-data"
     ports:
       - "127.0.0.1:{{APP_PORT}}:9000"
     environment:
@@ -25,3 +24,4 @@ services:
 networks:
     mariadb-user:
       external: true
+
