@@ -74,10 +74,3 @@ docker_compose_up(){
     fi
 }
 
-remove_tmp_themes_dir(){
-
-	rm -r "/var/www/html/${APP_NAME}/docker/themes"
-
-}
-
-
