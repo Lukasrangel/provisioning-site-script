@@ -22,6 +22,12 @@ RUN printf '%s\n' \
 # Copia os temas padrão
 COPY themes/ /usr/src/wordpress/wp-content/themes/
 
+# Cria pasta de mu-plugins e copia plugin
+RUN mkdir -p /usr/src/wordpress/wp-content/mu-plugins
+
+COPY plugins/punkzinese-dashboard.php \
+    /usr/src/wordpress/wp-content/mu-plugins/
+
 
 # Instala unzip
 RUN apk add --no-cache unzip

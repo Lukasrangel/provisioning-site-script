@@ -61,11 +61,18 @@ docker_copy_themes(){
 }
 
 
+docker_copy_plugins(){
+
+        mkdir -p "/var/www/html/$APP_NAME/docker/plugins"
+        cp -r /opt/infra/plugins/. "/var/www/html/$APP_NAME/docker/plugins/"
+}
+
+
 docker_compose_up(){
 	
     docker compose \
     -f "/var/www/html/$APP_NAME/docker/docker-compose.yml" \
-    up -d
+    -p $APP_NAME up -d --build
 
     if [ $? -ne 0 ]; then
 	echo "Erro ao subir o container!! Verifique as portas disponíveis!"

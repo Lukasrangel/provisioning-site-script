@@ -15,4 +15,4 @@ rm "/etc/nginx/sites-available/$APP"
 rm "/etc/nginx/sites-enabled/$APP"
 
 docker stop "${APP}-app"
-docker rm "$[APP}-app
+docker rm "${APP}-app"
