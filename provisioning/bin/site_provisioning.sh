@@ -144,7 +144,6 @@ make_dir
 dockerfile_php
 docker_compose_file
 docker_copy_themes
-docker_copy_plugins
 docker_compose_up
 
 

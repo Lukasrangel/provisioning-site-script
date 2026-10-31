@@ -10,18 +10,10 @@ server {
 
 	root /var/www/html/{{APP_NAME}}/public; 
 	index index.php index.html; 
-	
-	include /etc/nginx/snippets/security-limits.conf;
-
-	# Depende das configs do nginx conf.d/ para bloquear o IP
-	if ($f2b_blocked) {
-	    return 403;
-	}
 
 	# Logs 
 	access_log /var/log/nginx/{{APP_NAME}}/{{APP_NAME}}-access.log; 
 	error_log /var/log/nginx/{{APP_NAME}}/{{APP_NAME}}-error.log; 
-	access_log /var/log/nginx/security-access.log security;
 
 	# Tamanho máximo de upload 
 	client_max_body_size 64M; 
@@ -63,30 +55,7 @@ server {
 		access_log off; 
 		log_not_found off; 
 	} 
-	
-	location = /wp-login.php {
-    		limit_req zone=login_ip burst=5 nodelay;
-    		limit_req_status 429;
-
-		fastcgi_pass 127.0.0.1:{{APP_PORT}};
-                fastcgi_param SCRIPT_FILENAME /var/www/html$fastcgi_script_name;
-                include fastcgi_params; fastcgi_read_timeout 300;
-	}
-
-	location = /wp-admin/install.php {
-                auth_basic "Restricted Content";
-                auth_basic_user_file /etc/nginx/.htpasswd;
-
-                limit_req zone=login_ip burst=5 nodelay;
-                limit_req_status 429;
-
-                include fastcgi_params;
-                fastcgi_param SCRIPT_FILENAME /var/www/html$fastcgi_script_name;
-                fastcgi_pass 127.0.0.1:{{APP_PORT}};
-                fastcgi_read_timeout 300;
-        }
 
 	# Bloquear listagem de diretórios 
 	autoindex off; 
 }
-
